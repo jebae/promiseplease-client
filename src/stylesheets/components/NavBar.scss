@@ -1,0 +1,75 @@
+@import "../utils/variable";
+
+.NavBar {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: $navbar-height;
+	margin: 0;
+	z-index: 99;
+
+	background-color: $white;
+	box-shadow: 0px 0px 10px 5px $light-gray;
+
+	& > * {
+		display: inline-block;
+	}
+
+	.NavBar-Icon_toHome {
+		width: 30px;
+		height: 30px;
+		float: left;
+		margin: 15px;
+
+		background: url($icons-url) 0 0;
+		background-size: auto 31px;
+
+		@media #{$ebook-max-width} {
+			display: none;
+		}
+	}
+
+	.NavBar-Title {
+		top: 50%;
+		position: absolute;
+
+		color: $white;
+		text-shadow: 1px 1px 1px $dark-gray;
+
+		@media #{$tablet-min-width} {
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: $font-size-extralarge;
+		}
+
+		@media #{$ebook-max-width} {
+			left: 5%;
+			transform: translate(-5%, -50%);
+			font-size: $font-size-medium;
+		}
+	}
+
+	.Search-Container {
+		float: right;
+		margin: 10px;
+
+		@media #{$laptop-min-width} {
+			width: 25%;
+		}
+		
+		@media #{$tablet-max-width} {
+			width: 35%;
+		}
+
+		@media #{$ebook-max-width} {
+			width: 65%;
+		}
+
+		.SearchInput {
+			@media #{$ebook-max-width} {
+				font-size: $font-size-extrasmall !important;
+			}	
+		}
+	}
+}

@@ -1,0 +1,43 @@
+/* device size */
+$desktop-min-width: "(min-width: 1281px)";
+$laptop-max-width: "(min-width: 1280px)";
+$laptop-min-width: "(min-width: 1025px)";
+$tablet-max-width: "(max-width: 1024px)";
+$tablet-min-width: "(min-width: 768px)";
+$ebook-max-width: "(max-width: 767px)";
+$ebook-min-width: "(min-width: 481px)";
+$phone-max-width: "(max-width: 480px)";
+$phone-min-width: "(min-width: 320px)";
+
+/* font */
+$font-size-extrasmall: 12px;
+$font-size-small: 15px;
+$font-size-medium: 20px;
+$font-size-large: 25px;
+$font-size-extralarge: 30px;
+
+/* color */
+$black: #000000;
+$white: #FFFFFF;
+$light-gray: #D3D3D3;
+$silver: #C0C0C0;
+$dark-gray: #A9A9A9;
+$white-smoke: #F5F5F5;
+$medium-slate-blue: #7B68EE;
+
+/* border */
+$border-radius-extrasmall: 5px;
+$border-radius-small: 10px;
+$border-radius-medium: 15px;
+
+/* layout */
+$navbar-height: 60px;
+$footer-height: 100px;
+
+/* src */
+$icons-url: "https://www.dropbox.com/s/wwsnmq1t89tf7tn/icons.png?raw=1";
+$jumbotron-url: "https://www.dropbox.com/s/vbq4p10qaw4fz0e/vote.jpg?raw=1";
+
+:export {
+	lightGray: $light-gray;
+}

@@ -1,0 +1,45 @@
+@import "../utils/variable";
+
+.Jumbotron {
+	position: relative;
+	margin-bottom: 50px;
+
+	.Jumbotron-Background {
+		width: 100%;
+
+		background: url($jumbotron-url);
+		background-size: cover;
+		background-position: center;
+		opacity: 0.5;
+
+		@media #{$tablet-min-width} {
+			height: 400px;
+		}
+
+		@media #{$ebook-max-width} {
+			height: 200px;
+		}
+	}
+
+	.Search-Container {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media #{$tablet-min-width} {
+			width: 40%;
+			bottom: 40%;
+		}
+
+		@media #{$ebook-max-width} {
+			width: 80%;
+			bottom: 20%;
+		}
+
+		.Search-Input-Wrapper {
+			border: none;
+			border-bottom: 1px dashed $black;
+			border-radius: 0px;
+		}
+	}
+}

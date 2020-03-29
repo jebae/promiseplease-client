@@ -1,0 +1,38 @@
+@import "../utils/variable";
+@import "../components/Search";
+
+.HomePage {
+	position: relative;
+
+	.GeneralInfo-Container {
+		margin: 0 auto;
+
+		@media #{$laptop-min-width} {
+			width: 80%;
+		}
+	
+		@media #{$tablet-max-width} {
+			padding: 15px;
+		}
+	
+		@media #{$tablet-min-width} {
+			max-width: 2000px;
+		}
+	}
+
+	.Chart-Container {
+		margin: 0 auto;
+
+		@media #{$laptop-min-width} {
+			width: 80%;
+		}
+	
+		@media #{$tablet-max-width} {
+			padding: 15px;
+		}
+	
+		@media #{$tablet-min-width} {
+			max-width: 2000px;
+		}
+	}
+}

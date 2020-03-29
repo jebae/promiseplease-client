@@ -1,0 +1,32 @@
+@import "../utils/variable";
+
+.VoterCandidateCount-Section {
+	display: inline-block;
+	width: 35%;
+
+	.VoterCandidateCount-Icon {
+		width: 10px;
+		height: 40px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+
+		&.VoterCandidateCount-Icon_voter {
+			background: url($icons-url) -330px 0;
+			background-size: auto 40px;
+		}
+
+		&.VoterCandidateCount-Icon_candidate {
+			background: url($icons-url) -320px 0;
+			background-size: auto 40px;
+		}
+	}
+
+	.VoterCandidateCount-Count {
+		font-size: $font-size-large;
+
+		.VoterCandidateCount-Count-Unit {
+			font-size: $font-size-small;
+			padding-left: 5px;
+		}
+	}
+}

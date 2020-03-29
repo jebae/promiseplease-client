@@ -1,0 +1,49 @@
+@import "./utils/variable";
+@import "./utils/mixin";
+
+@font-face {
+	src: url("https://fonts.googleapis.com/css?family=Song+Myung&&subset=korean");
+}
+
+* {
+	font-family: "Song Myung", serif;
+	@include reset-margin-padding;
+}
+
+body {
+	margin: 0px;
+
+	font-size: $font-size-small;
+}
+
+.App {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: $footer-height * 2;
+}
+
+input {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.Page {
+	margin: 0 auto;
+	margin-top: $navbar-height;
+}
+
+.Candidate-NoData {
+	color: $silver;
+}
+
+.NotFound {
+	text-align: center;
+	margin-top: $navbar-height + 25px;
+}

@@ -1,0 +1,18 @@
+@import "../utils/variable";
+
+.DDay-Title {
+	font-size: $font-size-medium;
+}
+
+.DDay-DayCount {
+	height: 70px;
+	line-height: 70px;
+
+	font-size: 40px;
+	color: $medium-slate-blue;
+}
+
+.DDay-Date {
+	text-align: right;
+	margin-right: 20px;
+}

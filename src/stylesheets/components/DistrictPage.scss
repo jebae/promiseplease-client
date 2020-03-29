@@ -1,0 +1,44 @@
+@import "../utils/variable";
+
+.DistrictPage {
+	margin-left: auto;
+	margin-right: auto;
+
+	@media #{$laptop-min-width} {
+		width: 70%;
+	}
+
+	@media #{$tablet-max-width} {
+		padding: 15px;
+	}
+
+	@media #{$tablet-min-width} {
+		max-width: 1000px;
+	}
+
+	.DistrictDesc {
+		margin-bottom: 50px;
+
+		@media #{$laptop-min-width} {
+			margin-top: 150px;
+			margin-left: 15px;
+		}
+
+		@media #{$tablet-max-width} {
+			position: relative;
+			display: inline-block;
+			margin-top: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.VoteLocation-Container {
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.CandidateContainer {
+		margin: 0 auto;
+	}
+}

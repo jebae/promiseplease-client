@@ -1,0 +1,67 @@
+@import "../utils/variable";
+@import "../utils/animation";
+
+.AutoComplete-Wrapper {
+	overflow: auto;
+	max-height: 250px;
+	width: 100%;
+	margin-top: 5px;
+	font-size: $font-size-small;
+	border: 1px dashed $light-gray;
+	border-radius: $border-radius-small;
+	background-color: $white;
+
+	li {
+		height: 50px;
+		line-height: 50px;
+		padding-left: 12px;
+
+		border-top: 0.5px dashed $light-gray;
+		list-style-type: none;
+		cursor: pointer;
+
+		&:not(.AutoComplete-Loader):hover {
+			background-color: $white-smoke;
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		&:first-child {
+			border: none;
+		}
+
+		.AutoComplete-Word {
+			margin-right: 10px;
+			color: $black;
+			font-weight: bold;
+		}
+
+		.AutoComplete-Type {
+			font-size: $font-size-extrasmall;
+			color: $medium-slate-blue;
+		}
+	}
+
+	.AutoComplete-Loader {
+		text-align: center;
+
+		span {
+			font-size: $font-size-extralarge;
+
+			animation-name: blink;
+			animation-duration: 1.4s;
+			animation-iteration-count: infinite;
+			animation-fill-mode: both;
+
+			&:nth-child(2) {
+				animation-delay: .2s;
+			}
+
+			&:nth-child(3) {
+				animation-delay: .4s;
+			}
+		}
+   }
+}

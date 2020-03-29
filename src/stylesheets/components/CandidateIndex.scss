@@ -1,0 +1,33 @@
+@import "../utils/variable";
+@import "../utils/mixin";
+
+.CandidateIndex {
+	margin-bottom: 10px;
+	cursor: pointer;
+
+	span {
+		display: inline-block;
+
+		&.CandidateIndex-Number {
+			@include Candidate-Number-Ball;
+			width: 17px;
+			height: 17px;
+			line-height: 16px;
+			margin-right: 10px;
+
+			font-size: $font-size-extrasmall;
+		}
+
+		&.CandidateIndex-Name {
+			margin-right: 10px;
+
+			font-size: $font-size-small;
+			color: $dark-gray;
+		}
+
+		&.CandidateIndex-Party {
+			font-size: $font-size-extrasmall;
+			color: $light-gray;
+		}
+	}
+}

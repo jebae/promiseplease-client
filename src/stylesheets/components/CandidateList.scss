@@ -1,0 +1,30 @@
+@import "../utils/variable";
+
+.CandidateContainer {
+	position: relative;
+
+	.CandidateList {
+		@media #{$laptop-min-width} {
+			display: inline-block;
+			width: 75%;
+			vertical-align: top;
+		}
+
+		@media #{$tablet-max-width} {
+			width: 100%;
+		}
+	}
+
+	.CandidateIndexList {
+		width: calc(25% - 40px);
+		display: inline-block;
+		position: sticky;
+		top: 100px;
+		margin-right: 40px;
+		vertical-align: top;
+
+		@media #{$tablet-max-width} {
+			display: none;
+		}
+	}
+}

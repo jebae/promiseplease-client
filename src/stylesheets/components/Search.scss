@@ -1,0 +1,39 @@
+@import "../utils/variable";
+@import "./AutoCompleteList";
+
+.Search-Container {
+	position: relative;
+	height: 40px;
+
+	.Search-Input-Wrapper {
+		position: relative;
+
+		border: 1px dashed $light-gray;
+		border-radius: $border-radius-small;
+
+		.Search-Icon {
+			width: 20px;
+			height: 20px;
+			margin: 10px;
+			transform: scaleX(-1);
+			position: absolute;
+			left: 0;
+
+			opacity: 0.5;
+			background: url($icons-url) -140px 0;
+			background-size: auto 20px;
+		}
+	
+		.SearchInput {
+			height: 40px;
+			width: 100%;
+			padding: 0px 10px 0px 40px;
+			box-sizing: border-box;
+	
+			font-size: $font-size-small;
+			border: none;
+			border-radius: $border-radius-small;
+			background: transparent;
+		}
+	}
+}

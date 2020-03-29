@@ -1,0 +1,45 @@
+@import "../utils/variable";
+
+.DistrictDesc {
+	display: block;
+
+	.DistrictDesc-Name {
+		display: inline-block;
+		padding-bottom: 5px;
+		margin-bottom: 20px;
+
+		font-size: $font-size-large;
+		border-bottom: 1px dashed $light-gray;
+	}
+
+	.DistrictDesc-InfoContainer {
+		position: relative;
+
+		color: $dark-gray;
+
+		& > div {
+			margin-bottom: 8px;
+		}
+
+		.DistrictDesc-Icon {
+			width: 15px;
+			height: 15px;
+			margin-right: 10px;
+			margin-top: 5px;
+			display: inline-block;
+			transform: translateY(2px);
+
+			opacity: 0.3;
+
+			&.DistrictDesc-Icon_human {
+				background: url($icons-url) -89px 0;
+				background-size: auto 15px;
+			}
+
+			&.DistrictDesc-Icon_gender {
+				background: url($icons-url) -30px 0;
+				background-size: auto 15px;
+			}
+		}
+	}
+}

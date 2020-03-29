@@ -1,0 +1,36 @@
+@import "../utils/variable";
+@import "../utils/mixin";
+
+.Chart-Section {
+	@include Chart-Section;
+
+	.Chart-Content {
+		width: 100%;
+		height: 300px;
+		vertical-align: middle;
+	}
+
+	.Chart-Legend {
+		position: relative;
+
+		@media #{$tablet-min-width} {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.Chart-Title {
+		margin-left: 20px;
+		font-size: $font-size-medium;
+	}
+}
+
+.Chart-FetchFail {
+	@include Chart-Section;
+
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+
+	color: $dark-gray;
+}

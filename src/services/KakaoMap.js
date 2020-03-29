@@ -1,5 +1,5 @@
 const KAKAO_APP_KEY = process.env.KAKAO_APP_KEY;
-const KAKAO_MAP_URL = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_APP_KEY}&autoload=false`;
+const KAKAO_MAP_URL = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_APP_KEY}&autoload=false`;
 const MARKER_OPACITY = {
 	on: 1.0,
 	off: 0.5,

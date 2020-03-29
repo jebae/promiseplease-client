@@ -5,7 +5,7 @@ import express from "express";
 import ReactDomServer from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import Helmet from "react-helmet";
-import App from "../src/app";
+import App from "../src/App";
 
 const PORT = process.env.PORT;
 const app = express();

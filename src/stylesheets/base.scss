@@ -1,9 +1,10 @@
 @import "./utils/variable";
 @import "./utils/mixin";
 
-@font-face {
-	src: url("https://fonts.googleapis.com/css?family=Song+Myung&&subset=korean");
-}
+@import url('https://fonts.googleapis.com/css?family=Song+Myung&display=swap&subset=korean');
+// @font-face {
+// 	src: url("https://fonts.googleapis.com/css?family=Song+Myung&&subset=korean");
+// }
 
 * {
 	font-family: "Song Myung", serif;

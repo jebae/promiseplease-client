@@ -11,6 +11,7 @@ describe("Head", () => {
 	test("render", () => {
 		const wrapper = shallow(
 			<Head
+				url="http://example.com"
 				title={ title }
 				description={ description }
 				keywords={ keywords }

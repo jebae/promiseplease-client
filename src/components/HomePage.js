@@ -13,15 +13,14 @@ import HomePageSkeleton from "./skeletons/HomePageSkeleton";
 import Head from "./Head";
 import "../stylesheets/components/HomePage.scss";
 
-import Helmet from "react-helmet";
-
 const FETCH_COUNT = 11;
 
 const head = {
+	url: process.env.HOST_DOMAIN,
 	title: "약속해줘 - 21대 총선 투표소와 후보 공약",
 	description: "21대 국회의원 선거 투표소와 후보들의 공약을 찾아보세요",
 	keywords: [ "총선", "21대 총선", "투표", "국회의원 선거", "선거", "투표소", "공약", ],
-	image: "https://www.dropbox.com/s/vbq4p10qaw4fz0e/vote.jpg?raw=1",
+	image: "https://i.ibb.co/VwX4rW2/vote.jpg",
 };
 
 function HomePage(props) {

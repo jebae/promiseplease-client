@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --env=dev --open --hot",
-    "start": "pm2 start ./server/start.js",
+    "start": "pm2 start ./server/start.js --watch",
     "build": "webpack --env=prod",
     "test": "jest --watchAll --config ./jest.config.js",
     "storybook": "start-storybook -p 4000"

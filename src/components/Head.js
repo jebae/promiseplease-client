@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 export default function Head(props) {
-	const { title, description, keywords, image } = props;
+	const { url, title, description, keywords, image } = props;
 
 	return (
 		<Helmet>
@@ -16,6 +16,7 @@ export default function Head(props) {
 				? <meta name="keywords" content={ keywords.join(",") }/>
 				: null
 			}
+			<meta property="og:url" content={ url }/>
 			<meta property="og:title" content={ title }/>
 			<meta property="og:description" content={ description }/>
 			{
@@ -23,11 +24,13 @@ export default function Head(props) {
 				? <meta property="og:image" content={ image }/>
 				: null
 			}
+			<meta property="og:type" content="website"/>
 		</Helmet>
 	);
 }
 
 Head.propTypes = {
+	url: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
 	keywords: PropTypes.array,

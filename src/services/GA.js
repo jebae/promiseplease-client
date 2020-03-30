@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Route } from "react-router-dom";
 
 const GA_TRACK_ID = process.env.GA_TRACK_ID;
 
@@ -16,18 +15,9 @@ export const gaEvent = ({ category, action, label }) => {
 	(window.ga) && ga("send", "event", category, action, label || "");
 }
 
-function GA(props) {
-	const { pathname } = props.location;
-
-	useEffect(() => {
-		(window.ga) && ga("send", {
-			hitType: "pageview",
-			page: pathname,
-		});
-	}, [ pathname ]);
-	return null;
+export function gaPage(pathname) {
+	(window.ga) && ga("send", {
+		hitType: "pageview",
+		page: pathname,
+	});
 }
-
-export function RouteTracker() {
-	return <Route component={ GA }/>;
-};

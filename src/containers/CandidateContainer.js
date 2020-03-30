@@ -107,7 +107,6 @@ class CandidateContainer extends React.Component {
 					this.setState({ candidates }, successCallback);
 					return ;
 				}
-				console.log("not 200");
 				this.setState({ candidates: [] }, failCallback);
 			})
 			.catch(err => {

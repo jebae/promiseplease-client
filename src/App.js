@@ -5,7 +5,8 @@ import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import DistrictPageContainer from "./containers/DistrictPageContainer";
 import NotFound from "./components/NotFound";
-import { loadGA, RouteTracker } from "./services/GA";
+import { loadGA } from "./services/GA";
+import RouteTracker from "./utils/RouteTracker";
 import "./stylesheets/base.scss";
 
 export default class App extends React.Component {

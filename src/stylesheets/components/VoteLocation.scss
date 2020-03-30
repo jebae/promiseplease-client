@@ -25,7 +25,7 @@
 
 	.VoteLocation-Map, #VoteLocation-Map {
 		@media #{$tablet-min-width} {
-			height: 270px;
+			height: 300px;
 			width: calc(40% - 30px);
 			margin-right: 30px;
 
@@ -99,7 +99,7 @@
 		.VoteLocation-Address-List {
 			overflow: auto;
 			overflow-x: hidden;
-			height: 150px;
+			height: 180px;
 
 			.VoteLocation-Address {
 				min-height: 30px;

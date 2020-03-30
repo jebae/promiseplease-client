@@ -17,6 +17,15 @@ const MAP_CONTAINER_ID = "VoteLocation-Map";
 function DistrictList(props) {
 	const { districts, currentDistrict, changeDistrict } = props;
 
+	const handleClickDistrict = (index) => {
+		changeDistrict(index);
+		gaEvent({
+			category: "투표소 > 지역",
+			action: "click",
+			label: districts[index].name,
+		});
+	}
+
 	return (
 		<div className="VoteLocation-District-List">
 		{
@@ -24,7 +33,7 @@ function DistrictList(props) {
 				<div
 					key={ item.name }
 					className={ `VoteLocation-District ${(i === currentDistrict) ? "Focus" : ""}` }
-					onClick={ () => changeDistrict(i) }
+					onClick={ () => handleClickDistrict(i) }
 				>
 					{ item.name }
 				</div>
@@ -37,12 +46,29 @@ function DistrictList(props) {
 const VoteLocationAddress = React.forwardRef((props, ref) => {
 	const { location, index, currentAddress, handleClickAddress } = props;
 
+	const handleClickAddressWithGA = () => {
+		handleClickAddress(index);
+		if (currentAddress === index) {
+			gaEvent({
+				category: "투표소 > 주소 off",
+				action: "click",
+				label: location.address,
+			});
+		} else {
+			gaEvent({
+				category: "투표소 > 주소 on",
+				action: "click",
+				label: location.address,
+			});
+		}
+	}
+
 	return (
 		<div
 			key={ location.address }
 			className="VoteLocation-Address"
 			ref={ ref }
-			onClick={ () => handleClickAddress(index) }
+			onClick={ () => handleClickAddressWithGA() }
 		>
 			<div className={ (currentAddress === index) ? "Focus" : "" }>
 				<div className="VoteLocation-Address-Icon"></div>
@@ -54,6 +80,15 @@ const VoteLocationAddress = React.forwardRef((props, ref) => {
 
 function VoteLocationType(props) {
 	const { changeType, currentType } = props;
+
+	const handleClickDistrict = (type) => {
+		changeType(type);
+		gaEvent({
+			category: "투표소 > 유형",
+			action: "click",
+			label: type,
+		});
+	}
 	const types = [ "사전", "당일" ];
 
 	return (
@@ -63,7 +98,7 @@ function VoteLocationType(props) {
 				<div
 					className="VoteLocation-Type"
 					key={ type }
-					onClick={ () => changeType(type) }
+					onClick={ () => handleClickDistrict(type) }
 				>
 					<span
 						className={ (type === currentType) ? "Focus" : "" }
@@ -115,22 +150,12 @@ export default class VoteLocation extends React.Component {
 
 		if (this.state.currentAddress === index) {
 			this.setAddressOff();
-			gaEvent({
-				category: "투표소 > 주소 off",
-				action: "click",
-				label: locations[index].address,
-			});
 		} else {
 			this.setAddressOn(index);
 			const loc = locations[index];
 			const latlng = latLngObj(loc.latitude, loc.longitude);
 
 			this.map.panTo(latlng);
-			gaEvent({
-				category: "투표소 > 주소 on",
-				action: "click",
-				label: locations[index].address,
-			});
 		}
 	}
 

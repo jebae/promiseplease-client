@@ -6,7 +6,7 @@ const textLeftMargin = circleRadius * 2 + 5;
 const charSize = 12;
 const itemMarginRight = 10;
 const MAX_WINDOW_WIDTH = 768;
-const itemCountPerLine = (window.innerWidth >= MAX_WINDOW_WIDTH) ? 5 : 4;
+const itemCountPerLine = 4;
 
 function LegendItem(props) {
 	const { x, y, text, color } = props;
